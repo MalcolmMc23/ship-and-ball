@@ -54,7 +54,7 @@ class Mover{
   if (distToMainMover < 150) {
     this.acc = p5.Vector.sub(this.loc, mainMover.loc);
     this.acc.normalize();
-    this.acc.mult(0.5);
+    this.acc.mult(1.5);
   }
   this.vel.add(this.acc);
   if (this === mainMover) {
@@ -75,11 +75,16 @@ this.vel.limit(2);
   }
 
   render(){
+    let distToMainMover = this.loc.dist(mainMover.loc)
+
     if (this === mainMover) {
       this.clr = color(20, 250, 230);
     } else {
-      this.clr = color(250, 120, 90);
+      this.clr = color(250,0,0);
     }
+    if(distToMainMover > 150){
+      this.clr = color(250, 120, 90);
+    } 
     fill(this.clr);
     ellipse(this.loc.x, this.loc.y, this.diam)
   }

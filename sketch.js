@@ -6,7 +6,7 @@ var ships = [];
 var ball;
 
 function setup() {
-  var cnv = createCanvas(1100, 800);
+  var cnv = createCanvas(600, 500);
   cnv.position((windowWidth-width)/2, 30);
   loadShips(1);
 
@@ -22,7 +22,7 @@ function draw(){
 
 
 function loadShips(n) {
-  ball = new ball(random(width), random(height));
+  ball = new Ball(random(width), random(height));
   for(var j = 0; j < n; j++) {
     ships[j] = new Ship(random(width), random(height));
   }
