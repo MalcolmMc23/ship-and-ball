@@ -14,7 +14,12 @@ class Ship {
     }
 
     render() {
-        rect(this.loc.x, this.loc.y, this.size);
+        // rect(this.loc.x, this.loc.y, this.size);
+        push();
+        translate(this.loc.x, this.loc.y);
+        rotate(this.vel.heading());
+        quad(0, 0, 0, 30, 10, 20, 20, 20);
+        pop();
     }
 
     update() {

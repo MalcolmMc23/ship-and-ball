@@ -13,7 +13,7 @@ function setup() {
 }
 
 function draw(){
-  background(20,20,20,20)
+  background(200)
   ball.run();
   for(var i = 0; i < ships.length; i++) {
     ships[i].run()

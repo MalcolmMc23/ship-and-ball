@@ -7,10 +7,14 @@ class Ball {
     run() {
         this.update();
         this.render();
-        this.sides();
+        // this.sides();
     }
     update() {
-
+        // let distToShip = this.loc.dist()
+        // if(distToShip < 100){
+        //     this.loc.x = random(width);
+        //     this.loc.y = random(height);
+        // }
     }
 
     render() {
@@ -18,10 +22,7 @@ class Ball {
     }
 
     sides() {
-        var distToBall = this.loc.dist(ship.loc)
-        if(distToBall < 50) {
-            console.log("true")
-        }
+    
 
     }
 }
