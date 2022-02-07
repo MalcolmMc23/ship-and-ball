@@ -18,7 +18,7 @@ class Ship {
         push();
         translate(this.loc.x, this.loc.y);
         rotate(this.vel.heading());
-        quad(0, 0, 0, 30, 10, 20, 20, 20);
+        quad(-10, -10, -5, 0, -10, 10, 15, 0);
         pop();
     }
 
@@ -26,13 +26,9 @@ class Ship {
         // let distToBall = this.loc.dist(ball.loc)
         this.acc = p5.Vector.sub(ball.loc, this.loc);
         this.acc.normalize();
-        this.acc.mult(0.06);
+        this.acc.mult(1.0);
         this.vel.add(this.acc);
-        if (this === ball) {
-      this.vel.limit(2);
-        } else {
         this.vel.limit(3);
-      }
           this.loc.add(this.vel);          
     }
 

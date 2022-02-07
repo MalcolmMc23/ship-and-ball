@@ -5,16 +5,16 @@ class Ball {
     }
 
     run() {
-        this.update();
         this.render();
+        this.update();
         // this.sides();
     }
     update() {
-        // let distToShip = this.loc.dist()
-        // if(distToShip < 100){
-        //     this.loc.x = random(width);
-        //     this.loc.y = random(height);
-        // }
+        let distToShip = this.loc.dist(ship.loc)
+        if(distToShip < 100){
+            this.loc.x = random(width);
+            this.loc.y = random(height);
+        }
     }
 
     render() {
