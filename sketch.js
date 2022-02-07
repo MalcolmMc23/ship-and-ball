@@ -4,7 +4,8 @@
 
 var ships = [];
 var ball;
-let ship;
+var ship;
+var xoff = 0.0;
 
 function setup() {
   var cnv = createCanvas(600, 500);
@@ -15,7 +16,7 @@ function setup() {
 }
 
 function draw(){
-  background(20)
+  background(200)
   ball.run();
   ship.run();
   // for(var i = 0; i < ships.length; i++) {
